@@ -7,7 +7,6 @@ body{
     background-color:#fafbfd ;
     color: black;
     
-    
 }
 
 .titulo{
@@ -55,6 +54,9 @@ nav ul  {
     margin: 1px 100px 10px 100px;
     text-align: center;
 }
+main{
+    background-image: url();
+}
 main div{
   display: flex;
   justify-content: center;
@@ -68,16 +70,22 @@ main div{
   font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
-#productos{
+
+.multimedia{
+    width: 40%;
     display: flex;
     justify-content: center;
-    margin: 0px 400px 0px 100px;
+    margin: 80px;
+    padding: 50px;
+}
+#productos{
     font-size: 10px;
 }
-
-
-
-
+.carrito{
+    width: 60px;
+    margin: 20px;
+    padding: 10px;
+}
 
 
  
