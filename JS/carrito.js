@@ -6,9 +6,9 @@ const vinos = [
         tipo: "malbec", 
         maridajes:"carnes, pastas",
         precio: 12400,
-        img: "1.jpg",
+        img: "../img/vinos/alamos.jpg",
         descuento: 10
-        
+        //todavia estoy viendo porque se me rompe la img
     },
     
     {
@@ -39,7 +39,7 @@ const vinos = [
     precio: 28000,
    
     },
-    
+
     {   
     id: 5,
     nombre:"Alamos",
