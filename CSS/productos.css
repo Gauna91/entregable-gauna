@@ -1,0 +1,7 @@
+#producto-conteiner{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tarjeta-producto{
+    max-width: 400px;
+}

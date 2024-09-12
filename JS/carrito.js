@@ -6,9 +6,9 @@ const vinos = [
         tipo: "malbec", 
         maridajes:"carnes, pastas",
         precio: 12400,
-        img: "../img/vinos/alamos.jpg",
+        img: "../img/vinos/luiguibosca.jpg",
         descuento: 10
-        //todavia estoy viendo porque se me rompe la img
+        
     },
     
     {
@@ -18,6 +18,7 @@ const vinos = [
         tipo: "malbec", 
         maridajes:"Tablas de quesos duros, carnes vacunas grilladas y pastas rellenas con salsa a base de carnes",
         precio: 8500,
+        img: "../img/vinos/trumpeter.jpg",
         descuento: 10
     },
     {
@@ -27,6 +28,7 @@ const vinos = [
         tipo: "malbec, malbec", 
         maridajes:"carnes rojas, carnes a la parrilla, verduras salteadas",
         precio: 14900,
+        img: "../img/vinos/dv-catena.jpg",
         descuento: 10
     },
 
@@ -36,6 +38,7 @@ const vinos = [
     caracteristicas: "Rojo violaceo, con matices azulados, En nariz, se destaca una gran complejidad aromatica: Notas de ciruela entremezcladas con especias que recuerdan a vainillas, anis y pimiemta negra",
     tipo: "malbec", 
     maridajes:"carnes vacunas, quesos duros, locro, guiso de lentejas, cordero, chivito",
+    img: "../img/vinos/trumpeter.jpg",
     precio: 28000,
    
     },
@@ -46,6 +49,7 @@ const vinos = [
     caracteristicas: "Presenta un profundo color purpura con reflejos violetas, su aroma remite a intensos frutos negros con ligeras notas florales y de tostado",
     tipo: "malbec", 
     maridajes:"carnes rojas, pizzas, aves condimentadas",
+    img: "../img/vinos/alamos.jpg",
     precio: 9500,
     
 },
