@@ -2,9 +2,11 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+
   }
 body{
     background-color:#fafbfd ;
+    background-image: url();
     color: black;
     
 }
@@ -12,9 +14,12 @@ body{
 .titulo{
     text-align: center;
     margin: 80px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    
+    font-family: "Merriweather", serif;
+    font-weight: 300;
     font-style: normal;
+    
+      
   
 }
 
@@ -48,11 +53,16 @@ nav ul  {
     
 }
 .texto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1px 100px 10px 100px;
+    margin: -400px 500px 200px -300px;
+    padding: 400px;
+    
+    font-family: "Permanent Marker", cursive;
+    font-weight: 500;
+    font-style:normal;
     text-align: center;
+    
+
+    
 }
 main{
     background-image: url();
@@ -72,17 +82,46 @@ main div{
 }
 
 .multimedia{
-    width: 40%;
+    width: 30%;
+    
     display: flex;
     justify-content: center;
-    margin: 80px;
-    padding: 50px;
+    margin: -500px 100px 100px 700px;
+    
 }
 
 .carrito{
     width: 60px;
     margin: 20px;
     padding: 10px;
+}
+button{
+    background-color:tan;
+    font-size: 15px;
+    border: unset;
+}
+
+#productos-conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    max-width: 800px;
+    margin: auto;
+}
+.tarjeta-producto{
+    max-width: 200px;
+    gap: 15px;
+    margin: 80px;
+    padding: 30px;
+    text-align: center;
+    
+}
+
+.tarjeta-producto img{
+    width: 100%;
+    aspect-ratio: 1;
+    
+
 }
 
 
