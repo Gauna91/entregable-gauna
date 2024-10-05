@@ -5,30 +5,32 @@
 
   }
 body{
-    background-color:#fafbfd ;
-    background-image: url();
+    background-color:#040708;
     color: black;
+    margin: auto;
     
 }
 
 .titulo{
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin: 80px;
-    
+    margin: -300px;
+    padding: 60px;
+    color: #f4f4f4;
+    font-size:50px;
     font-family: "Merriweather", serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
-    
-      
-  
 }
 
 .div{
     
-    background-color: #fafbfd;
-    color: #004D2B;
+    background-color:#f4f4f4;
+    color:black;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+   
     
     
 }
@@ -39,7 +41,7 @@ header img{
     
 }
 header{
-    background-color: #004D2B;
+    background-color: #FAFBFD;
     margin: 0px 30px;
     display: flex;
     justify-content: center;
@@ -53,16 +55,10 @@ nav ul  {
     
 }
 .texto{
-    margin: -400px 500px 200px -300px;
+    margin: 200px 400px 800px -100px;
     padding: 400px;
-    
-    font-family: "Permanent Marker", cursive;
-    font-weight: 500;
-    font-style:normal;
     text-align: center;
-    
-
-    
+    color: #f4f4f4;
 }
 main{
     background-image: url();
@@ -74,6 +70,14 @@ main div{
   margin: 50px;
   
 }
+.mainphoto{
+    width: 100%;
+    height: 100vh;
+    margin: -30px 200px 0px 0px;
+    padding: 30px;
+    
+    
+}
 .boton{
   background-color: #004D2B;
   color: black;
@@ -81,14 +85,7 @@ main div{
 
 }
 
-.multimedia{
-    width: 30%;
-    
-    display: flex;
-    justify-content: center;
-    margin: -500px 100px 100px 700px;
-    
-}
+
 
 .carrito{
     width: 60px;
@@ -96,32 +93,51 @@ main div{
     padding: 10px;
 }
 button{
-    background-color:tan;
+    background-color:#62332F;
+    color: #f4f4f4;
     font-size: 15px;
-    border: unset;
+    border-style:groove;
+    
+  
 }
 
 #productos-conteiner{
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
-    max-width: 800px;
-    margin: auto;
+    
+    
 }
 .tarjeta-producto{
-    max-width: 200px;
-    gap: 15px;
-    margin: 80px;
-    padding: 30px;
-    text-align: center;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 25%;
+  text-align: center;
+  align-items: center;
+  margin: 0px 30px 0px 80px;
+  padding: 150px;
+  color: #f4f4f4;
+  text-shadow: 1px 1px 3px rgba(1,2,1,1);
     
 }
-
 .tarjeta-producto img{
-    width: 100%;
-    aspect-ratio: 1;
+    max-width: 800%;
+}
+.tarjeta-producto :hover{
+    transform: scale(2);
+}
+.logo{
+    width:15%;
     
-
+}
+.tienda{
+    display: flex;
+    justify-content: center;
+    margin: -1900px 0px 600px 0px;
+    padding: 400px;
+   
+   
 }
 
 

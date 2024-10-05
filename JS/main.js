@@ -1,7 +1,7 @@
-const vinos = [
+const vinos= [
     {
         id: 1,
-        nombre:"luigui bosca",
+        nombre:"LUIGUI BOSCA",
         caracteristicas: "tinto color roojo violaceo brillante.Sus aromas son intensos y amables, con notas que recuerdan a frutas rojas, y tonos algo florales y especiados",
         tipo: "malbec", 
         maridajes:"carnes, pastas",
@@ -13,7 +13,7 @@ const vinos = [
     
     {
         id: 2,
-        nombre:"Trumpeter",
+        nombre:"TRUMPETER",
         caracteristicas: "De un impactante color violeta, naris frutal destacando ciruelas, cerezas y notas de flores",
         tipo: "malbec", 
         maridajes:"Tablas de quesos duros, carnes vacunas grilladas y pastas rellenas con salsa a base de carnes",
@@ -23,7 +23,7 @@ const vinos = [
     },
     {
         id: 3,
-        nombre:"D.V Catena",
+        nombre:"D.V CATENA",
         caracteristicas: "Aporta aromas de mermelada de ciruelas maduras y moras negras, suavidad y volumen al paladar",
         tipo: "malbec, malbec", 
         maridajes:"carnes rojas, carnes a la parrilla, verduras salteadas",
@@ -34,7 +34,7 @@ const vinos = [
 
     {  
     id: 4,
-    nombre:"Rutini",
+    nombre:"RUTINI",
     caracteristicas: "Rojo violaceo, con matices azulados, En nariz, se destaca una gran complejidad aromatica: Notas de ciruela entremezcladas con especias que recuerdan a vainillas, anis y pimiemta negra",
     tipo: "malbec", 
     maridajes:"carnes vacunas, quesos duros, locro, guiso de lentejas, cordero, chivito",
@@ -45,7 +45,7 @@ const vinos = [
 
     {   
     id: 5,
-    nombre:"Alamos",
+    nombre:"ALAMOS",
     caracteristicas: "Presenta un profundo color purpura con reflejos violetas, su aroma remite a intensos frutos negros con ligeras notas florales y de tostado",
     tipo: "malbec", 
     maridajes:"carnes rojas, pizzas, aves condimentadas",
@@ -62,46 +62,61 @@ const vinos = [
 
 
 
-let carritodeproductos = []
+let carrodecompras = []
 
-let contenedortarjeta = document.getElementById("productos-conteiner")
+let contenedorProductos = document.getElementById("productos-conteiner")
+const vercarrito = document.getElementById("vercarrito")
+const modelocarro = document.getElementById("modelocarro")
 
 
 
 function TarjetaDeProductos(productoscarrito){
-    productoscarrito.forEach(producto => {
+        productoscarrito.forEach(producto => {
         const carrito = document.createElement("div")
         carrito.classList = "tarjeta-producto"
         carrito.innerHTML = `
         <img src=${producto.img}>
         <h3>${producto.nombre}</h3>
         <span>$${producto.precio}</span>
-        <button class="agregarproductos" id="${producto.id}"> Agregar </button>`
+        <button class="agregarproductos" id="${producto.id}">COMPRAR</button>
+        `
 
-        contenedortarjeta.appendChild(carrito)  
+        contenedorProductos.appendChild(carrito) 
+
+        carrito.addEventListener("click",() =>{
+            carrodecompras.push({
+
+                img: producto.img,
+                nombre: producto.nombre,
+                precio: producto.precio,
+                
+
+            })
+            console.log(carrodecompras)
+
+            
+     })
+     
+
     })
     agregaralcarrito()
 }
-
-
 TarjetaDeProductos(vinos)
 
-function agregaralcarrito(){
-    unboton  = document.querySelectorAll(".agregarproductos")
-    unboton.forEach(boton =>{
-        boton.onclick = (e) => {
-            const productsid = e.currentTarget.id
-            const productoseleccionado = vinos.find(producto => producto.id == productsid)
-            carritodeproductos.push(productoseleccionado)
-            console.log(carritodeproductos)
 
-            localStorage.setItem("carritodeproductos", JSON.stringify(contenedortarjeta))
-        }
+vercarrito.addEventListener("click", () =>{
+    const modelo = document.createElement("div")
+    modelo.className = "modelo"
+    modelo.innerHTML = `¨
+    <h1 class="modelocompra">carrito</h1>`
 
-    })
-    
+    modelocarro.appendChild(modelo)
+    const modeloboton = document.createElement("h1")
+    modeloboton.innerText = "x"
+    modeloboton.classList = "modelo-boton"
+    modelo.appendChild(modelocarro)
+})
 
-}
 
 
 
