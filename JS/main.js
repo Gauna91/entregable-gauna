@@ -1,3 +1,8 @@
+
+
+
+
+
 const vinos= [
     {
         id: 1,
@@ -56,18 +61,11 @@ const vinos= [
 
 ]
 
-
-
-
-
-
-
 let carrodecompras = []
 
-let contenedorProductos = document.getElementById("productos-conteiner")
-const vercarrito = document.getElementById("vercarrito")
-const modelocarro = document.getElementById("modelocarro")
 
+
+let contenedorProductos = document.getElementById("productos-conteiner")
 
 
 function TarjetaDeProductos(productoscarrito){
@@ -83,19 +81,7 @@ function TarjetaDeProductos(productoscarrito){
 
         contenedorProductos.appendChild(carrito) 
 
-        carrito.addEventListener("click",() =>{
-            carrodecompras.push({
-
-                img: producto.img,
-                nombre: producto.nombre,
-                precio: producto.precio,
-                
-
-            })
-            console.log(carrodecompras)
-
-            
-     })
+        
      
 
     })
@@ -103,19 +89,40 @@ function TarjetaDeProductos(productoscarrito){
 }
 TarjetaDeProductos(vinos)
 
+function agregaralcarrito () {
+    unboton  = document.querySelectorAll(".agregarproductos")
+      unboton.forEach (boton => {
+       boton.onclick = (e) => {
+           const productId = e.currentTarget.id
+           const productoseleccionado = vinos.find(producto => producto.id ==productId)
+           carrodecompras.push(productoseleccionado)
+          
 
-vercarrito.addEventListener("click", () =>{
-    const modelo = document.createElement("div")
-    modelo.className = "modelo"
-    modelo.innerHTML = `¨
-    <h1 class="modelocompra">carrito</h1>`
+           localStorage.setItem("carrodecompras", JSON.stringify(carrodecompras))
+       }
+      
 
-    modelocarro.appendChild(modelo)
-    const modeloboton = document.createElement("h1")
-    modeloboton.innerText = "x"
-    modeloboton.classList = "modelo-boton"
-    modelo.appendChild(modelocarro)
+   })
+}
+
+    let contenedorUsuario = document.getElementById("usuario")
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(Response => Response.json())
+.then(data => {
+    data.forEach(user => {
+        const card = document.createElement("div")
+        card.innerHTML = `<h2>nombre: ${user.name}</h2>
+        <h3>username:${user.username}</h3>
+        <h4>contacto: ${user.email}</h4>`
+
+        contenedorUsuario.appendChild(card)
+
+    })
+
+
 })
+
+
 
 
 
